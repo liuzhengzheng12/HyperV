@@ -11,6 +11,6 @@ compile:
 clean:
         @rm -rf build
 
-run: 
+run: compile
         @cp build/hyperv.json $(SWITCH_DIR)
         @cd $(SWITCH_DIR) && sudo bash simple_switch hyperv.json $(INTF) $(LOG)
